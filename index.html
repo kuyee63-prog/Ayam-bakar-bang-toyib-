@@ -161,10 +161,9 @@ body{font-family:-apple-system,'Segoe UI',Roboto,sans-serif;background:#1a120b;c
 <script>
 /* ============ DATA ============ */
 const FALLBACK_MENU=[
- {id:1,cat:'ayam',emoji:'🍗',name:'Ayam Bakar Dada',desc:'+ lalapan + sambal',price:13000},
- {id:2,cat:'ayam',emoji:'🍗',name:'Ayam Bakar Paha',desc:'+ lalapan + sambal',price:13000},
- {id:3,cat:'paket',emoji:'🍱',name:'Paket Nasi Ayam Bakar',desc:'nasi + ayam + lalapan + sambal + es teh',price:18000},
- {id:4,cat:'ayam',emoji:'🔥',name:'Ayam Bakar Ekor',desc:'+ lalapan + sambal',price:10000},
+ {id:1,cat:'ayam',emoji:'🍗',name:'Ayam Bakar Dada',desc:'+ lalapan + sambal',price:15000},
+ {id:2,cat:'ayam',emoji:'🍗',name:'Ayam Bakar Paha',desc:'+ lalapan + sambal',price:15000},
+ {id:3,cat:'paket',emoji:'🍱',name:'Paket Nasi Ayam Bakar',desc:'nasi + ayam + lalapan + sambal + es teh',price:20000},
  {id:5,cat:'tambahan',emoji:'🍚',name:'Nasi Putih',desc:'1 porsi',price:5000},
  {id:6,cat:'tambahan',emoji:'🥬',name:'Lalapan Extra',desc:'timun + kol + kemangi',price:3000},
 ];
@@ -178,7 +177,7 @@ let SHOP_OPEN=true;
 let MENU=FALLBACK_MENU.slice();
 function descFor(n){
  const d={'Ayam Bakar Dada':'+ lalapan + sambal','Ayam Bakar Paha':'+ lalapan + sambal',
- 'Paket Nasi Ayam Bakar':'nasi + ayam + lalapan + sambal + es teh','Ayam Bakar Ekor':'+ lalapan + sambal',
+ 'Paket Nasi Ayam Bakar':'nasi + ayam + lalapan + sambal + es teh',
  'Nasi Putih':'1 porsi','Lalapan Extra':'timun + kol + kemangi'};
  return d[n]||'';
 }
