@@ -163,9 +163,12 @@ body{font-family:-apple-system,'Segoe UI',Roboto,sans-serif;background:#1a120b;c
 const FALLBACK_MENU=[
  {id:1,cat:'ayam',emoji:'🍗',name:'Ayam Bakar Dada',desc:'+ lalapan + sambal',price:15000},
  {id:2,cat:'ayam',emoji:'🍗',name:'Ayam Bakar Paha',desc:'+ lalapan + sambal',price:15000},
- {id:3,cat:'paket',emoji:'🍱',name:'Paket Nasi Ayam Bakar',desc:'nasi + ayam + lalapan + sambal + es teh',price:20000},
+ {id:3,cat:'paket',emoji:'🍱',name:'Paket Nasi Ayam Bakar',desc:'nasi + ayam + lalapan + sambal',price:20000},
  {id:5,cat:'tambahan',emoji:'🍚',name:'Nasi Putih',desc:'1 porsi',price:5000},
  {id:6,cat:'tambahan',emoji:'🥬',name:'Lalapan Extra',desc:'timun + kol + kemangi',price:3000},
+ {id:7,cat:'tambahan',emoji:'🌶️',name:'Sambal Extra',desc:'sambal dadakan',price:2000},
+ {id:8,cat:'ayam',emoji:'🍗',name:'Ayam Goreng Sayap',desc:'+ lalapan + sambal',price:15000},
+ {id:9,cat:'ayam',emoji:'🍗',name:'Ayam Goreng Paha',desc:'+ lalapan + sambal',price:15000},
 ];
 /* Menu live dari Google Sheet (fallback = data di atas jika offline) */
 const SHEET_ID=''; // isi ID Sheet menu ayam bakar jika sudah ada
@@ -177,8 +180,9 @@ let SHOP_OPEN=true;
 let MENU=FALLBACK_MENU.slice();
 function descFor(n){
  const d={'Ayam Bakar Dada':'+ lalapan + sambal','Ayam Bakar Paha':'+ lalapan + sambal',
- 'Paket Nasi Ayam Bakar':'nasi + ayam + lalapan + sambal + es teh',
- 'Nasi Putih':'1 porsi','Lalapan Extra':'timun + kol + kemangi'};
+ 'Paket Nasi Ayam Bakar':'nasi + ayam + lalapan + sambal',
+ 'Nasi Putih':'1 porsi','Lalapan Extra':'timun + kol + kemangi','Sambal Extra':'sambal dadakan',
+ 'Ayam Goreng Sayap':'+ lalapan + sambal','Ayam Goreng Paha':'+ lalapan + sambal'};
  return d[n]||'';
 }
 async function loadMenu(){
