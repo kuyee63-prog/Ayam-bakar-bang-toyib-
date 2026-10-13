@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Ayam Bakar Ruri — PO Online</title>
+<title>Ayam Bakar Bang Toyib — PO Online</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 body{font-family:-apple-system,'Segoe UI',Roboto,sans-serif;background:#1a120b;color:#2b1d12;min-height:100vh;display:flex;justify-content:center}
@@ -95,7 +95,7 @@ body{font-family:-apple-system,'Segoe UI',Roboto,sans-serif;background:#1a120b;c
 <!-- ==================== BUYER ==================== -->
 <div id="viewBuyer">
   <div class="b-hero">
-    <h1>🍗 Ayam Bakar Ruri</h1>
+    <h1>🍗 Ayam Bakar Bang Toyib</h1>
     <span class="open" id="shopBadge">● BUKA</span>
     <p>📍 Kibin, Serang • PO dibuka 08.00–15.00 WIB</p>
     <div style="display:flex;gap:8px;margin-top:10px">
@@ -106,7 +106,7 @@ body{font-family:-apple-system,'Segoe UI',Roboto,sans-serif;background:#1a120b;c
   </div>
 
   <div id="menuSec"></div>
-  <p class="note">PO via status WA • Ayam Bakar Ruri</p>
+  <p class="note">PO via status WA • Ayam Bakar Bang Toyib</p>
   <p class="note" style="opacity:.4;font-size:10px">v1.0</p>
 </div>
 
@@ -172,7 +172,7 @@ const SHEET_ID=''; // isi ID Sheet menu ayam bakar jika sudah ada
 /* Backend pesanan — diisi setelah Apps Script di-deploy. Kosongkan = mode manual (tanpa kirim). */
 const APPS_URL='';
 const ORDER_TOKEN='dd849f5119d77c795ef355feaf8f51fc';
-const WA_NUMBER='6281381909651'; // nomor WA penjual utk pesanan via WhatsApp
+const WA_NUMBER='6285183030293'; // nomor WA penjual utk pesanan via WhatsApp
 let SHOP_OPEN=true;
 let MENU=FALLBACK_MENU.slice();
 function descFor(n){
@@ -326,7 +326,7 @@ async function placeOrder(){
  }else{
   /* Tanpa backend: SEMUA pesanan via WhatsApp agar masuk HP penjual */
   viaWA=true; terkirim=true;
-  let msg='🍗 *PO AYAM BAKAR RURI*\nNo: '+no+'\nNama: '+name+'\nTipe: '+(orderType==='diantar'?'Diantar 🛵':'Ambil Sendiri 🏠')+'\n🕒 Jam: '+selectedSlot+' (hari ini)\n— — —\n';
+  let msg='🍗 *PO AYAM BAKAR BANG TOYIB*\nNo: '+no+'\nNama: '+name+'\nTipe: '+(orderType==='diantar'?'Diantar 🛵':'Ambil Sendiri 🏠')+'\n🕒 Jam: '+selectedSlot+' (hari ini)\n— — —\n';
   items.forEach(it=>{msg+='• '+it.qty+'x '+it.name+' — Rp'+(it.qty*it.price).toLocaleString('id-ID')+'\n'});
   if(ongkir>0)msg+='• Ongkir — Rp'+ongkir.toLocaleString('id-ID')+'\n';
   msg+='*Total: Rp'+(t+ongkir).toLocaleString('id-ID')+'*\nBayar: '+payMethod+'\n';
